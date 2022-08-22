@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    tools:ignore="MergeRootFrame"
+    tools:context=".MainActivity">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                tools:targetApi="jelly_bean"
+                android:text="Personal Information" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Details"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:padding="5dp"
+                tools:targetApi="jelly_bean" />
+
+            <View
+                style="@style/Divider"
+                android:layout_height="2dp"
+                android:background="@color/green"/>
+
+            <TextView
+                android:id="@+id/shopname"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Name"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/green"
+                android:textSize="17dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/shop_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Name"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_description"
+                    android:fontFamily="@font/poppinsmedium"
+                    tools:targetApi="jelly_bean" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/age_textview"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="63dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:padding="10dp"
+                    android:text="Age"
+                    android:textColor="@color/green"
+                    android:textSize="17dp" />
+
+                <NumberPicker
+                    android:id="@+id/numberpicker_main_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/age_textview" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/datetext"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Date of Birth"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/green"
+                android:textSize="17dp" />
+
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/displaybutton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Display"
+                android:onClick="displayMessage" />
+
+            <TextView
+                android:id="@+id/displaymessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=""
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/black"
+                android:textSize="10dp" />
+        </LinearLayout>
+</ScrollView>
